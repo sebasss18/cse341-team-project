@@ -11,26 +11,6 @@
     "https"
   ],
   "paths": {
-    "/login": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
-    "/logout": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
     "/guns/": {
       "get": {
         "tags": [
@@ -126,6 +106,9 @@
         }
       },
       "put": {
+        "tags": [
+          "Guns"
+        ],
         "description": "",
         "parameters": [
           {

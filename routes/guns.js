@@ -10,7 +10,7 @@ router.get('/:id', gunsController.getSingle);
 
 router.post('/', isAuthenticated, validation.saveGun, gunsController.createGun);
 
-router.put('/:id', isAuthenticated, validation.saveGun, gunssController.updateGun);
+router.put('/:id', isAuthenticated, validation.saveGun, gunsController.updateGun);
 
 router.delete('/:id', isAuthenticated, gunsController.deleteGun);
 

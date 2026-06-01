@@ -4,7 +4,7 @@ const ObjectId = require("mongodb").ObjectId;
 const getAll = async (req, res) => {
   //#swagger.tags=['Guns']
   try {
-    const vehicles = await mongodb
+    const guns = await mongodb
       .getDatabase()
       .db()
       .collection("guns")

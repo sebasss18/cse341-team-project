@@ -2,16 +2,14 @@ const swaggerAutogen = require("swagger-autogen")();
 
 const doc = {
   info: {
-    title: "CSE 341 Group Project",
-    description: "Gun API",
+    title: "QuickBuy Marketplace API",
+    description: "API that provides CRUD operations for marketplace resources, MongoDB data storage, and GitHub authentication.",
   },
-
-  host: "cse341-team-project-9jd5.onrender.com",
+  host: "cse341-team-project-mlfj.onrender.com",
   schemes: ["https"],
 };
 
 const outputFile = "./swagger.json";
-const endpointsFiles = ["./routes/index.js"];
+const endpointFiles = ["./routes/index.js"];
 
-// generate swagger.json
-swaggerAutogen(outputFile, endpointsFiles, doc);
+swaggerAutogen(outputFile, endpointFiles, doc);

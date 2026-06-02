@@ -19,6 +19,9 @@ router.get("/status", (req, res) => {
 // Here you guys need to add your routes, from your collection
 router.use("/movies", require("./movies"));
 
+//Michael Bowman gun route
+router.use('/guns', require('./guns'));
+
 
 router.get("/login", passport.authenticate("github"));
 

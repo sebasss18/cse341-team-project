@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const dotenv = require("dotenv").config();
 const mongodb = require("./data/database");
 const passport = require("passport");
 const session = require("express-session");
@@ -65,6 +66,10 @@ app.get(
     res.redirect("/");
   },
 );
+
+process.on('uncaughtException', (err, origin) => {
+    console.log(process.stderr.fd, `Caught exemption: ${err}\n` + `Exemption origin: ${origin}`);
+});
 
 mongodb.initDb((err) => {
   if (err) {

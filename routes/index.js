@@ -18,6 +18,7 @@ router.get("/status", (req, res) => {
 
 // Here you guys need to add your routes, from your collection
 router.use("/movies", require("./movies"));
+router.use("/games", require("./games"));
 
 
 router.get("/login", passport.authenticate("github"));

@@ -37,13 +37,13 @@ const createGames = async (req, res) => {
   //#swagger.tags=['Games']
   try {
     const game = {
-      title: req.body.title,
-      author: req.body.author,
-      director: req.body.director,
-      year: req.body.year,
+      name: req.body.name,
+      releaseDate: req.body.releaseDate,
+      platform: req.body.platform,
       genre: req.body.genre,
-      rating: req.body.rating,
-      durationMinutes: req.body.durationMinutes,
+      description: req.body.description,
+      players: req.body.players,
+      type: req.body.type,
     };
 
     const response = await mongodb
@@ -68,13 +68,13 @@ const updateGame = async (req, res) => {
     const gameId = new ObjectId(req.params.id);
 
     const game = {
-      title: req.body.title,
-      author: req.body.author,
-      director: req.body.director,
-      year: req.body.year,
+      name: req.body.name,
+      releaseDate: req.body.releaseDate,
+      platform: req.body.platform,
       genre: req.body.genre,
-      rating: req.body.rating,
-      durationMinutes: req.body.durationMinutes,
+      description: req.body.description,
+      players: req.body.players,
+      type: req.body.type,
     };
 
     const response = await mongodb

@@ -5,7 +5,7 @@
     "description": "API that provides CRUD operations for marketplace resources, MongoDB data storage, and GitHub authentication.",
     "version": "1.0.0"
   },
-  "host": "cse341-team-project-mlfj.onrender.com/",
+  "host": "cse341-team-project-mlfj.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"

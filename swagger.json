@@ -11,10 +11,10 @@
     "https"
   ],
   "paths": {
-    "/guns/": {
+    "/movies/": {
       "get": {
         "tags": [
-          "Guns"
+          "Movies"
         ],
         "description": "",
         "responses": {
@@ -28,7 +28,6 @@
       },
       "post": {
         "tags": [
-          "Guns"
           "Movies"
         ],
         "description": "",
@@ -39,25 +38,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "manufacturer": {
-                  "example": "any"
-                },
-                "category": {
-                  "example": "any"
-                },
-                "caliber": {
-                  "example": "any"
-                },
-                "finish": {
-                  "example": "any"
-                },
-                "price": {
-                  "example": "any"
-                },
-                "status": {
                 "title": {
                   "example": "any"
                 },
@@ -84,8 +64,6 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
           "201": {
             "description": "Created"
           },
@@ -95,19 +73,12 @@
           "401": {
             "description": "Unauthorized"
           },
-          "412": {
-            "description": "Precondition Failed"
-          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       }
     },
-    "/guns/{id}": {
-      "get": {
-        "tags": [
-          "Guns"
     "/movies/{id}": {
       "get": {
         "tags": [
@@ -126,8 +97,6 @@
           "200": {
             "description": "OK"
           },
-          "400": {
-            "description": "Bad Request"
           "404": {
             "description": "Not Found"
           },
@@ -138,7 +107,6 @@
       },
       "put": {
         "tags": [
-          "Guns"
           "Movies"
         ],
         "description": "",
@@ -155,25 +123,6 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "manufacturer": {
-                  "example": "any"
-                },
-                "category": {
-                  "example": "any"
-                },
-                "caliber": {
-                  "example": "any"
-                },
-                "finish": {
-                  "example": "any"
-                },
-                "price": {
-                  "example": "any"
-                },
-                "status": {
                 "title": {
                   "example": "any"
                 },
@@ -209,11 +158,6 @@
           "401": {
             "description": "Unauthorized"
           },
-          "412": {
-            "description": "Precondition Failed"
-          },
-          "500": {
-            "description": "Internal Server Error"
           "404": {
             "description": "Not Found"
           }
@@ -221,8 +165,191 @@
       },
       "delete": {
         "tags": [
-          "Guns"
           "Movies"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/guns/": {
+      "get": {
+        "tags": [
+          "Guns"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Guns"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "manufacturer": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                },
+                "caliber": {
+                  "example": "any"
+                },
+                "finish": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/guns/{id}": {
+      "get": {
+        "tags": [
+          "Guns"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Guns"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "manufacturer": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                },
+                "caliber": {
+                  "example": "any"
+                },
+                "finish": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Guns"
         ],
         "description": "",
         "parameters": [
@@ -245,8 +372,6 @@
           },
           "500": {
             "description": "Internal Server Error"
-          "404": {
-            "description": "Not Found"
           }
         }
       }

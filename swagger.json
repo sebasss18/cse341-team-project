@@ -192,6 +192,10 @@
         }
       }
     },
+    "/games/": {
+      "get": {
+        "tags": [
+          "Movies"
     "/guns/": {
       "get": {
         "tags": [
@@ -209,6 +213,7 @@
       },
       "post": {
         "tags": [
+          "Games"
           "Guns"
         ],
         "description": "",
@@ -222,6 +227,22 @@
                 "name": {
                   "example": "any"
                 },
+                "releaseDate": {
+                  "example": "any"
+                },
+                "platform": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "players": {
+                  "example": "any"
+                },
+                "type": {
                 "manufacturer": {
                   "example": "any"
                 },
@@ -245,6 +266,11 @@
           }
         ],
         "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
           "204": {
             "description": "No Content"
           },
@@ -260,6 +286,10 @@
         }
       }
     },
+    "/games/{id}": {
+      "get": {
+        "tags": [
+          "Games"
     "/guns/{id}": {
       "get": {
         "tags": [
@@ -278,6 +308,8 @@
           "200": {
             "description": "OK"
           },
+          "404": {
+            "description": "Not Found"
           "400": {
             "description": "Bad Request"
           },
@@ -288,6 +320,7 @@
       },
       "put": {
         "tags": [
+          "Games"
           "Guns"
         ],
         "description": "",
@@ -307,6 +340,22 @@
                 "name": {
                   "example": "any"
                 },
+                "releaseDate": {
+                  "example": "any"
+                },
+                "platform": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "players": {
+                  "example": "any"
+                },
+                "type": {
                 "manufacturer": {
                   "example": "any"
                 },
@@ -339,6 +388,8 @@
           "401": {
             "description": "Unauthorized"
           },
+          "404": {
+            "description": "Not Found"
           "412": {
             "description": "Precondition Failed"
           },
@@ -349,6 +400,7 @@
       },
       "delete": {
         "tags": [
+          "Games"
           "Guns"
         ],
         "description": "",
@@ -367,6 +419,8 @@
           "400": {
             "description": "Bad Request"
           },
+          "404": {
+            "description": "Not Found"
           "401": {
             "description": "Unauthorized"
           },

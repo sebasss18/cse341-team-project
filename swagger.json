@@ -186,9 +186,7 @@
           "Movies"
     "/guns/": {
       "get": {
-        "tags": [
-          "Guns"
-        ],
+        "tags": ["Guns"],
         "description": "",
         "responses": {
           "200": {
@@ -201,7 +199,6 @@
       },
       "post": {
         "tags": [
-          "Games"
           "Guns"
         ],
         "description": "",
@@ -280,9 +277,7 @@
           "Games"
     "/guns/{id}": {
       "get": {
-        "tags": [
-          "Guns"
-        ],
+        "tags": ["Guns"],
         "description": "",
         "parameters": [
           {
@@ -308,7 +303,6 @@
       },
       "put": {
         "tags": [
-          "Games"
           "Guns"
         ],
         "description": "",
@@ -388,7 +382,6 @@
       },
       "delete": {
         "tags": [
-          "Games"
           "Guns"
         ],
         "description": "",

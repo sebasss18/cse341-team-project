@@ -27,7 +27,24 @@ const moviesValidation = () => {
 // Add your validation functions below
 // Please use comments to separate each collection
 // Follow the naming convention, collectionNameValidation
+// this is my games validation
+const gamesValidation = () => {
+  return [
+    body("name").trim().notEmpty().withMessage("Name is required"),
 
+    body("releaseDate").trim().notEmpty().withMessage("Release date is required"),
+
+    body("platform").trim().notEmpty().withMessage("Platform is required"),
+
+    body("genre").trim().notEmpty().withMessage("Genre is required"),
+
+    body("description").trim().notEmpty().withMessage("Description is required"),
+
+    body("players").trim().notEmpty().withMessage("Players is required"),
+
+    body("type").trim().notEmpty().withMessage("Type is required"),
+  ];
+};
 
 
 const validate = (req, res, next) => {
@@ -46,5 +63,6 @@ const validate = (req, res, next) => {
 
 module.exports = {
   moviesValidation,
+  gamesValidation,
   validate,
 };

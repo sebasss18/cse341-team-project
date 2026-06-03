@@ -11,6 +11,59 @@
     "https"
   ],
   "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "API Name"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/status": {
+      "get": {
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/login": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/logout": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
+          }
+        }
+      }
+    },
     "/movies/": {
       "get": {
         "tags": [
@@ -196,10 +249,6 @@
       "get": {
         "tags": [
           "Movies"
-    "/guns/": {
-      "get": {
-        "tags": [
-          "Guns"
         ],
         "description": "",
         "responses": {
@@ -214,7 +263,6 @@
       "post": {
         "tags": [
           "Games"
-          "Guns"
         ],
         "description": "",
         "parameters": [
@@ -243,6 +291,168 @@
                   "example": "any"
                 },
                 "type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/games/{id}": {
+      "get": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
+                "releaseDate": {
+                  "example": "any"
+                },
+                "platform": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "players": {
+                  "example": "any"
+                },
+                "type": {
+                  "example": "any"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Games"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/guns/": {
+      "get": {
+        "tags": [
+          "Guns"
+        ],
+        "description": "",
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Guns"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "example": "any"
+                },
                 "manufacturer": {
                   "example": "any"
                 },
@@ -266,11 +476,6 @@
           }
         ],
         "responses": {
-          "201": {
-            "description": "Created"
-          },
-          "400": {
-            "description": "Bad Request"
           "204": {
             "description": "No Content"
           },
@@ -286,10 +491,6 @@
         }
       }
     },
-    "/games/{id}": {
-      "get": {
-        "tags": [
-          "Games"
     "/guns/{id}": {
       "get": {
         "tags": [
@@ -308,8 +509,6 @@
           "200": {
             "description": "OK"
           },
-          "404": {
-            "description": "Not Found"
           "400": {
             "description": "Bad Request"
           },
@@ -320,7 +519,6 @@
       },
       "put": {
         "tags": [
-          "Games"
           "Guns"
         ],
         "description": "",
@@ -340,22 +538,6 @@
                 "name": {
                   "example": "any"
                 },
-                "releaseDate": {
-                  "example": "any"
-                },
-                "platform": {
-                  "example": "any"
-                },
-                "genre": {
-                  "example": "any"
-                },
-                "description": {
-                  "example": "any"
-                },
-                "players": {
-                  "example": "any"
-                },
-                "type": {
                 "manufacturer": {
                   "example": "any"
                 },
@@ -388,8 +570,6 @@
           "401": {
             "description": "Unauthorized"
           },
-          "404": {
-            "description": "Not Found"
           "412": {
             "description": "Precondition Failed"
           },
@@ -400,7 +580,6 @@
       },
       "delete": {
         "tags": [
-          "Games"
           "Guns"
         ],
         "description": "",
@@ -419,8 +598,6 @@
           "400": {
             "description": "Bad Request"
           },
-          "404": {
-            "description": "Not Found"
           "401": {
             "description": "Unauthorized"
           },

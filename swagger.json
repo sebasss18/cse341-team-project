@@ -7,15 +7,11 @@
   },
   "host": "cse341-team-project-mlfj.onrender.com",
   "basePath": "/",
-  "schemes": [
-    "https"
-  ],
+  "schemes": ["https"],
   "paths": {
     "/movies/": {
       "get": {
-        "tags": [
-          "Movies"
-        ],
+        "tags": ["Movies"],
         "description": "",
         "responses": {
           "200": {
@@ -27,9 +23,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Movies"
-        ],
+        "tags": ["Movies"],
         "description": "",
         "parameters": [
           {
@@ -81,9 +75,7 @@
     },
     "/movies/{id}": {
       "get": {
-        "tags": [
-          "Movies"
-        ],
+        "tags": ["Movies"],
         "description": "",
         "parameters": [
           {
@@ -106,9 +98,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Movies"
-        ],
+        "tags": ["Movies"],
         "description": "",
         "parameters": [
           {
@@ -164,9 +154,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Movies"
-        ],
+        "tags": ["Movies"],
         "description": "",
         "parameters": [
           {

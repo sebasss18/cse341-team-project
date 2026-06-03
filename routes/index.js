@@ -20,6 +20,9 @@ router.get("/status", (req, res) => {
 router.use("/movies", require("./movies"));
 router.use("/games", require("./games"));
 
+//Michael Bowman gun route
+router.use('/guns', require('./guns'));
+
 
 router.get("/login", passport.authenticate("github"));
 

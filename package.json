@@ -1,15 +1,38 @@
 {
+  "name": "cse341-team-project",
+  "version": "1.0.0",
+  "description": "CSE 341 Group Project",
+  "homepage": "https://github.com/sebasss18/cse341-team-project#readme",
+  "bugs": {
+    "url": "https://github.com/sebasss18/cse341-team-project/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebasss18/cse341-team-project.git"
+  },
+  "license": "ISC",
+  "author": "Michael Bowman, Saul Sotelo, Ammon Merrell, Geoffrey Etu",
+  "type": "commonjs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
   "dependencies": {
+    "body-parser": "^2.2.2",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "express-session": "^1.19.0",
+    "mongodb": "^7.2.0",
+    "nodemon": "^3.1.14",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1",
+    "validatorjs": "^3.22.1",
     "express-validator": "^7.3.2",
     "googleapis": "^173.0.0",
-    "mongodb": "^7.2.0",
-    "passport": "^0.7.0",
-    "passport-github": "^1.1.0",
-    "swagger-autogen": "^2.23.7",
-    "swagger-ui-express": "^5.0.1"
+    "passport-github": "^1.1.0"
   }
 }

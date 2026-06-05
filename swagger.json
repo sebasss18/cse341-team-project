@@ -7,29 +7,29 @@
   },
   "host": "cse341-team-project-mlfj.onrender.com",
   "basePath": "/",
-  "schemes": ["https"],
+  "schemes": [
+    "https"
+  ],
   "paths": {
-    "/": {
-      "get": {
-        "tags": ["API Name"],
-        "description": "",
-        "responses": {
-          "200": { "description": "OK" }
-        }
-      }
-    },
-
     "/movies/": {
       "get": {
-        "tags": ["Movies"],
+        "tags": [
+          "Movies"
+        ],
         "description": "",
         "responses": {
-          "200": { "description": "OK" },
-          "500": { "description": "Internal Server Error" }
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       },
       "post": {
-        "tags": ["Movies"],
+        "tags": [
+          "Movies"
+        ],
         "description": "",
         "parameters": [
           {
@@ -38,29 +38,53 @@
             "schema": {
               "type": "object",
               "properties": {
-                "title": { "example": "any" },
-                "author": { "example": "any" },
-                "director": { "example": "any" },
-                "year": { "example": "any" },
-                "genre": { "example": "any" },
-                "rating": { "example": "any" },
-                "durationMinutes": { "example": "any" }
+                "title": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "director": {
+                  "example": "any"
+                },
+                "year": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "rating": {
+                  "example": "any"
+                },
+                "durationMinutes": {
+                  "example": "any"
+                }
               }
             }
           }
         ],
         "responses": {
-          "201": { "description": "Created" },
-          "400": { "description": "Bad Request" },
-          "401": { "description": "Unauthorized" },
-          "500": { "description": "Internal Server Error" }
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       }
     },
-
     "/movies/{id}": {
       "get": {
-        "tags": ["Movies"],
+        "tags": [
+          "Movies"
+        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -70,30 +94,80 @@
           }
         ],
         "responses": {
-          "200": { "description": "OK" },
-          "404": { "description": "Not Found" },
-          "500": { "description": "Internal Server Error" }
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       },
       "put": {
-        "tags": ["Movies"],
+        "tags": [
+          "Movies"
+        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
             "in": "path",
             "required": true,
             "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "example": "any"
+                },
+                "author": {
+                  "example": "any"
+                },
+                "director": {
+                  "example": "any"
+                },
+                "year": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "rating": {
+                  "example": "any"
+                },
+                "durationMinutes": {
+                  "example": "any"
+                }
+              }
+            }
           }
         ],
         "responses": {
-          "204": { "description": "No Content" },
-          "400": { "description": "Bad Request" },
-          "401": { "description": "Unauthorized" },
-          "404": { "description": "Not Found" }
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
         }
       },
       "delete": {
-        "tags": ["Movies"],
+        "tags": [
+          "Movies"
+        ],
+        "description": "",
         "parameters": [
           {
             "name": "id",
@@ -103,25 +177,40 @@
           }
         ],
         "responses": {
-          "204": { "description": "No Content" },
-          "400": { "description": "Bad Request" },
-          "401": { "description": "Unauthorized" },
-          "404": { "description": "Not Found" }
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
         }
       }
     },
-
     "/games/": {
       "get": {
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "description": "",
         "responses": {
-          "200": { "description": "OK" },
-          "500": { "description": "Internal Server Error" }
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       },
       "post": {
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "description": "",
         "parameters": [
           {
@@ -130,29 +219,52 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": { "example": "any" },
-                "releaseDate": { "example": "any" },
-                "platform": { "example": "any" },
-                "genre": { "example": "any" },
-                "description": { "example": "any" },
-                "players": { "example": "any" },
-                "type": { "example": "any" }
+                "name": {
+                  "example": "any"
+                },
+                "releaseDate": {
+                  "example": "any"
+                },
+                "platform": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "players": {
+                  "example": "any"
+                },
+                "type": {
+                  "example": "any"
+                }
               }
             }
           }
         ],
         "responses": {
-          "201": { "description": "Created" },
-          "400": { "description": "Bad Request" },
-          "401": { "description": "Unauthorized" },
-          "500": { "description": "Internal Server Error" }
+          "201": {
+            "description": "Created"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       }
     },
-
     "/games/{id}": {
       "get": {
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "description": "",
         "parameters": [
           {
@@ -163,13 +275,21 @@
           }
         ],
         "responses": {
-          "200": { "description": "OK" },
-          "404": { "description": "Not Found" },
-          "500": { "description": "Internal Server Error" }
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       },
       "put": {
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "description": "",
         "parameters": [
           {
@@ -184,26 +304,50 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": { "example": "any" },
-                "releaseDate": { "example": "any" },
-                "platform": { "example": "any" },
-                "genre": { "example": "any" },
-                "description": { "example": "any" },
-                "players": { "example": "any" },
-                "type": { "example": "any" }
+                "name": {
+                  "example": "any"
+                },
+                "releaseDate": {
+                  "example": "any"
+                },
+                "platform": {
+                  "example": "any"
+                },
+                "genre": {
+                  "example": "any"
+                },
+                "description": {
+                  "example": "any"
+                },
+                "players": {
+                  "example": "any"
+                },
+                "type": {
+                  "example": "any"
+                }
               }
             }
           }
         ],
         "responses": {
-          "204": { "description": "No Content" },
-          "400": { "description": "Bad Request" },
-          "401": { "description": "Unauthorized" },
-          "404": { "description": "Not Found" }
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "404": {
+            "description": "Not Found"
+          }
         }
       },
       "delete": {
-        "tags": ["Games"],
+        "tags": [
+          "Games"
+        ],
         "description": "",
         "parameters": [
           {
@@ -214,24 +358,37 @@
           }
         ],
         "responses": {
-          "204": { "description": "No Content" },
-          "400": { "description": "Bad Request" },
-          "404": { "description": "Not Found" }
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          }
         }
       }
     },
-
     "/guns/": {
       "get": {
-        "tags": ["Guns"],
+        "tags": [
+          "Guns"
+        ],
         "description": "",
         "responses": {
-          "200": { "description": "OK" },
-          "500": { "description": "Internal Server Error" }
+          "200": {
+            "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       },
       "post": {
-        "tags": ["Guns"],
+        "tags": [
+          "Guns"
+        ],
         "description": "",
         "parameters": [
           {
@@ -240,29 +397,52 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": { "example": "any" },
-                "manufacturer": { "example": "any" },
-                "category": { "example": "any" },
-                "caliber": { "example": "any" },
-                "finish": { "example": "any" },
-                "price": { "example": "any" },
-                "status": { "example": "any" }
+                "name": {
+                  "example": "any"
+                },
+                "manufacturer": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                },
+                "caliber": {
+                  "example": "any"
+                },
+                "finish": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                }
               }
             }
           }
         ],
         "responses": {
-          "201": { "description": "Created" },
-          "401": { "description": "Unauthorized" },
-          "412": { "description": "Precondition Failed" },
-          "500": { "description": "Internal Server Error" }
+          "204": {
+            "description": "No Content"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       }
     },
-
     "/guns/{id}": {
       "get": {
-        "tags": ["Guns"],
+        "tags": [
+          "Guns"
+        ],
         "description": "",
         "parameters": [
           {
@@ -273,13 +453,21 @@
           }
         ],
         "responses": {
-          "200": { "description": "OK" },
-          "400": { "description": "Bad Request" },
-          "500": { "description": "Internal Server Error" }
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       },
       "put": {
-        "tags": ["Guns"],
+        "tags": [
+          "Guns"
+        ],
         "description": "",
         "parameters": [
           {
@@ -294,27 +482,53 @@
             "schema": {
               "type": "object",
               "properties": {
-                "name": { "example": "any" },
-                "manufacturer": { "example": "any" },
-                "category": { "example": "any" },
-                "caliber": { "example": "any" },
-                "finish": { "example": "any" },
-                "price": { "example": "any" },
-                "status": { "example": "any" }
+                "name": {
+                  "example": "any"
+                },
+                "manufacturer": {
+                  "example": "any"
+                },
+                "category": {
+                  "example": "any"
+                },
+                "caliber": {
+                  "example": "any"
+                },
+                "finish": {
+                  "example": "any"
+                },
+                "price": {
+                  "example": "any"
+                },
+                "status": {
+                  "example": "any"
+                }
               }
             }
           }
         ],
         "responses": {
-          "204": { "description": "No Content" },
-          "400": { "description": "Bad Request" },
-          "401": { "description": "Unauthorized" },
-          "412": { "description": "Precondition Failed" },
-          "500": { "description": "Internal Server Error" }
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "412": {
+            "description": "Precondition Failed"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       },
       "delete": {
-        "tags": ["Guns"],
+        "tags": [
+          "Guns"
+        ],
         "description": "",
         "parameters": [
           {
@@ -325,10 +539,18 @@
           }
         ],
         "responses": {
-          "204": { "description": "No Content" },
-          "400": { "description": "Bad Request" },
-          "401": { "description": "Unauthorized" },
-          "500": { "description": "Internal Server Error" }
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
         }
       }
     }

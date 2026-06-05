@@ -64,7 +64,7 @@ const updateBook = async (req, res) => {
             publishedYear: req.body.publishedYear
         };
 
-        const response = await mongodb.getDatabase().db().collection('books').updateOne({ _id: bookId },  updatedBook);
+        const response = await mongodb.getDatabase().db().collection('books').replaceOne({ _id: bookId }, updatedBook);
 
         if (response.modifiedCount > 0) {
             res.status(204).send();

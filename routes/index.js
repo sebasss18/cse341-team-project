@@ -24,7 +24,7 @@ router.use("/games", require("./games"));
 router.use('/guns', require('./guns'));
 
 //Geoffrey Book routes
-router.use("/books"  , require("./books"));
+router.use("/books", require("./books"));
 
 
 router.get("/login", passport.authenticate("github"));

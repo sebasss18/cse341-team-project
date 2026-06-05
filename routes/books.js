@@ -26,3 +26,5 @@ router.put(
 );
 
 router.delete('/:id', isAuthenticated, booksController.deleteBook);
+
+module.exports = router;

@@ -57,14 +57,14 @@ const updateBook = async (req, res) => {
     //#swagger.tags=['Books']
     try {
         const bookId = new ObjectId(req.params.id);
-        const updatedBook = {
+        const book = {
             title: req.body.title,
             author: req.body.author,
             genre: req.body.genre,
             publishedYear: req.body.publishedYear
         };
 
-        const response = await mongodb.getDatabase().db().collection('books').updateOne({ _id: bookId },  updatedBook);
+        const response = await mongodb.getDatabase().db().collection('books').replaceOne({ _id: bookId }, book);
 
         if (response.modifiedCount > 0) {
             res.status(204).send();

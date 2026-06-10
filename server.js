@@ -71,12 +71,4 @@ process.on('uncaughtException', (err, origin) => {
     console.log(process.stderr.fd, `Caught exemption: ${err}\n` + `Exemption origin: ${origin}`);
 });
 
-mongodb.initDb((err) => {
-  if (err) {
-    console.log(err);
-  } else {
-    app.listen(port, () => {
-      console.log(`Database connected and server running on port ${port}`);
-    });
-  }
-});
+module.exports = app;

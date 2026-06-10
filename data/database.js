@@ -1,7 +1,7 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-const MongoClient = require("mongodb").MongoClient;
+const { MongoClient } = require("mongodb");
 
 let database;
 
@@ -10,7 +10,14 @@ const initDb = (callback) => {
     console.log("db is already initialized!");
     return callback(null, database);
   }
-  MongoClient.connect(process.env.MONGODB_URI)
+
+  // Use local MongoDB for Jest, real DB otherwise
+  const uri =
+    process.env.NODE_ENV === "test"
+      ? process.env.MONGO_URL
+      : process.env.MONGODB_URI;
+
+  MongoClient.connect(uri)
     .then((client) => {
       database = client;
       callback(null, database);
@@ -23,9 +30,8 @@ const initDb = (callback) => {
 const getDatabase = () => {
   if (!database) {
     throw Error("Database not initialized");
-  } else {
-    return database;
   }
+  return database;
 };
 
 module.exports = { initDb, getDatabase };

@@ -70,6 +70,22 @@ const gamesValidation = () => {
   ];
 };
 
+//Validation for books collection
+const booksValidation = () => {
+  return [
+    body("title").trim().notEmpty().withMessage("Title is required"),
+
+    body("author").trim().notEmpty().withMessage("Author is required"),
+
+    body("genre").trim().notEmpty().withMessage("Genre is required"),
+
+    body("publishedYear")
+      .isInt({ min: 1900, max: new Date().getFullYear() })
+      .withMessage("Published year must be a valid number"),
+  ];
+}
+
+
 
 const validate = (req, res, next) => {
   console.log(req.body);
@@ -89,5 +105,6 @@ module.exports = {
   moviesValidation,
   gamesValidation,
   validate,
-  saveGun
+  saveGun,
+  booksValidation
 };

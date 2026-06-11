@@ -13,18 +13,16 @@
   "license": "ISC",
   "author": "Michael Bowman, Saul Sotelo, Ammon Merrell, Geoffrey Etu",
   "type": "commonjs",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
-    "start": "nodemon server.js"
+    "start": "nodemon index.js"
   },
-  "jest": {
-    "preset": "@shelf/jest-mongodb",
-    "testEnvironment": "node",
-    "setupFilesAfterEnv": [
-      "<rootDir>/test/setup.js"
-    ]
-  },
+ "jest": {
+  "preset": "@shelf/jest-mongodb",
+  "testEnvironment": "node",
+  "setupFilesAfterEnv": ["<rootDir>/test/setup.js"]
+},
   "dependencies": {
     "body-parser": "^2.2.2",
     "cors": "^2.8.6",

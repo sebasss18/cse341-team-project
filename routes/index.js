@@ -23,6 +23,9 @@ router.use("/games", require("./games"));
 //Michael Bowman gun route
 router.use('/guns', require('./guns'));
 
+//Geoffrey Book routes
+router.use("/books", require("./books"));
+
 
 router.get("/login", passport.authenticate("github"));
 

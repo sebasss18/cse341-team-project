@@ -33,5 +33,6 @@ describe("Games API", () => {
     const games = await db.collection("games").findOne({});
     const res = await request.get(`/games/${games._id}`);
     expect(res.statusCode).toBe(200);
+    expect(res.body.name).toBe("The Legend of Zelda: ocarina of time(remastered)")
   });
 });

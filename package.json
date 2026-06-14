@@ -18,11 +18,13 @@
     "test": "jest --verbose",
     "start": "nodemon index.js"
   },
- "jest": {
-  "preset": "@shelf/jest-mongodb",
-  "testEnvironment": "node",
-  "setupFilesAfterEnv": ["<rootDir>/test/setup.js"]
-},
+  "jest": {
+    "preset": "@shelf/jest-mongodb",
+    "testEnvironment": "node",
+    "setupFilesAfterEnv": [
+      "<rootDir>/test/setup.js"
+    ]
+  },
   "dependencies": {
     "body-parser": "^2.2.2",
     "cors": "^2.8.6",
